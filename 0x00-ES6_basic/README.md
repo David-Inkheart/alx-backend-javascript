@@ -74,3 +74,21 @@ export default function getSanFranciscoDescription() {
         / ' proper had a GDP of ' + budget.gdp + ', and a GDP per capita of ' + budget.capita + '.';
 }
 ```
+
+### [7. Object property value shorthand syntax](./7-getBudgetObject.js)
+- Notice how the keys and the variable names are the same?
+
+Modify the following function’s budget object to simply use the keyname instead.
+
+```
+export default function getBudgetObject(income, gdp, capita) {
+  const budget = {
+    income: income,
+    gdp: gdp,
+    capita: capita,
+  };
+
+  return budget;
+}
+```
+
