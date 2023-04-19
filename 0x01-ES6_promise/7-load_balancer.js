@@ -3,5 +3,5 @@
 // The function should return the value returned by the promise that resolved the first.
 
 export default function loadBalancer(chinaDownload, USDownload) {
-  return Promise.any([chinaDownload, USDownload]).then((value) => value);
+  return Promise.any([chinaDownload, USDownload]);
 }
