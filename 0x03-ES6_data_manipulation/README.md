@@ -9,9 +9,13 @@
 - Write a function named getListStudentIds that returns an array of ids from a list of object.
 
 ### [2.](./)
-- Write a function named updateStudentGradeByCity that returns an array of students for a specific city with their new grade
+- Write a function named updateStudentByLocation that returns an array of students for a specific location.
+- It should accept a list of students (from `getListStudents`) and a `city` (string) as parameters.
+- You must use the filter function on the array.
 
-### [3.](./)
+### [3.Reduce](./3-get_ids_sum.js)
+- Write a function named getStudentIdsSum that returns the sum of all the student ids.
+- You must use a reduce function on the array of students.
 
 ### [4.](./)
 
