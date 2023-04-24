@@ -11,7 +11,16 @@ export default function cleanSet(set, startString) {
     return '';
   }
 
-  const filteredSet = new Set([...set].filter((item) => item.startsWith(startString)));
-  const stringArray = [...filteredSet].map((value) => value.slice(startString.length));
-  return stringArray.join('-');
+  // const filteredSet = new Set([...set].filter((item) => item.startsWith(startString)));
+  // const stringArray = [...filteredSet].map((value) => value.slice(0, startString.length - 1));
+  // return stringArray.join('-');
+
+  let filteredSet = '';
+  set.forEach((item) => {
+    if (item.startsWith(startString)) {
+      // eslint-disable-next-line
+      filteredSet += item.slice(startString.length) + '-';
+    }
+  });
+  return filteredSet.slice(0, -1);
 }
