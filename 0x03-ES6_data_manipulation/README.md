@@ -3,10 +3,13 @@
 # TASKS
 
 ### [0.Basic list of objects](./0-get_list_students.js)
+- Write a function named getListStudents that returns an array of objects.
 
-### [1.](./)
+### [1.More mapping](./1-get_list_student_ids.js)
+- Write a function named getListStudentIds that returns an array of ids from a list of object.
 
 ### [2.](./)
+- Write a function named updateStudentGradeByCity that returns an array of students for a specific city with their new grade
 
 ### [3.](./)
 
