@@ -8,7 +8,7 @@
 ### [1.More mapping](./1-get_list_student_ids.js)
 - Write a function named getListStudentIds that returns an array of ids from a list of object.
 
-### [2.](./)
+### [2.Filter](./2-get_student_by_location.js)
 - Write a function named updateStudentByLocation that returns an array of students for a specific location.
 - It should accept a list of students (from `getListStudents`) and a `city` (string) as parameters.
 - You must use the filter function on the array.
@@ -22,7 +22,7 @@
 - It should accept a list of students (from `getListStudents`), a `city` (string), and `newGrades` (array of grades) as parameters
 - You must use `filter` and `map` combined.
 
-### [5.](./5-typed_arrays.js)
+### [5.Typed Arrays](./5-typed_arrays.js)
 - Write a function named `createInt8TypedArray` that returns a new `ArrayBuffer` with a `Int8` value at a specific position.
 - It should accept a `length` (number), `position` (number) and `value` (Number) as parameters.
 - If adding the value is not possible the error `Position outside range` should be thrown.

@@ -5,14 +5,13 @@
 
 // If adding the value is not possible the error Position outside range should be thrown.
 
-// eslint-disable-next-line
 export default function createInt8TypedArray(length, position, value) {
-  const buffer = new ArrayBuffer(length);
-  try {
-    const TarrayView = new DataView(buffer);
-    TarrayView.setInt8(position, value);
-    return TarrayView;
-  } catch (e) {
-    console.log('Position outside range');
+  if (position > length) {
+    throw new Error('Position outside range');
   }
+
+  const buffer = new ArrayBuffer(length);
+  const TarrayView = new DataView(buffer);
+  TarrayView.setInt8(position, value);
+  return TarrayView;
 }
