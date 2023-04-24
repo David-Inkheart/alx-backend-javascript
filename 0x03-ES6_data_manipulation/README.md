@@ -52,6 +52,9 @@ Rice, 1
 Banana, 5
 ```
 
-### [10.](./)
+### [10.More map data structure](./10-update_uniq_items.js)
+- Write a function named `updateUniqueItems` that returns an updated map for all items with initial quantity at 1.
+- It should accept a `map` (Map) as a parameter.
+- For each entry of the map where the quantity is 1, update the quantity to 100. If updating the quantity is not possible (argument is not a map) the error `Cannot process` should be thrown.
 
 ### [11.](./)
