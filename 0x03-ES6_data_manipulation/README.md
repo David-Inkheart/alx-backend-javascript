@@ -17,9 +17,16 @@
 - Write a function named getStudentIdsSum that returns the sum of all the student ids.
 - You must use a reduce function on the array of students.
 
-### [4.](./)
+### [4.Combine](./4-update_grade_by_city.js)
+- Write a function named `updateStudentGradeByCity` that returns an array of students for a specific city with their new grade
+- It should accept a list of students (from `getListStudents`), a `city` (string), and `newGrades` (array of grades) as parameters
+- You must use `filter` and `map` combined.
 
-### [5.](./)
+### [5.](./5-typed_arrays.js)
+- Write a function named `createInt8TypedArray` that returns a new `ArrayBuffer` with a `Int8` value at a specific position.
+- It should accept a `length` (number), `position` (number) and `value` (Number) as parameters.
+- If adding the value is not possible the error `Position outside range` should be thrown.
+
 
 ### [6.](./)
 
