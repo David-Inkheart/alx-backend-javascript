@@ -7,7 +7,7 @@
 // The string contains all the values of the set separated by -
 
 export default function cleanSet(set, startString) {
-  if (startString === '') {
+  if (startString === '' || set.size === 0 || startString === undefined || set === undefined || startString === null || set === null || startString === Infinity || set === Infinity || startString === -Infinity || set === -Infinity || typeof startString !== 'string' || typeof set !== 'object' || set.constructor !== Set || startString.length === 0) {
     return '';
   }
   const stringSet = new Set([...set].filter((item) => item.startsWith(startString)));
