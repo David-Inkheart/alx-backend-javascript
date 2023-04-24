@@ -15,12 +15,13 @@ export default function cleanSet(set, startString) {
   // const stringArray = [...filteredSet].map((value) => value.slice(0, startString.length - 1));
   // return stringArray.join('-');
 
-  let filteredSet = '';
-  set.forEach((item) => {
-    if (item.startsWith(startString)) {
-      // eslint-disable-next-line
-      filteredSet += item.slice(startString.length) + '-';
+  const items = Array.from(set);
+  const newArr = [];
+
+  for (const item of items) {
+    if (item && item.startsWith(startString)) {
+      newArr.push(item.replace(startString, ''));
     }
-  });
-  return filteredSet.slice(0, -1);
+  }
+  return newArr.join('-');
 }
