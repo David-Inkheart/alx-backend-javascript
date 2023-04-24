@@ -36,7 +36,11 @@
 - Write a function named `hasValuesFromArray` that returns a boolean if all the elements from the array exist in the set.
 - It should accept a `set` (Set) and `array` (Array) as parameters.
 
-### [8.](./)
+### [8.Clean set](./8-clean_set.js)
+- Write a function named `cleanSet` that returns a string 
+of all the set values that start with a specific string (`startString`).
+- It should accept a `set` (Set) and `startString` (string) as parameters.
+- When a value starts with `startString` you only append the rest of the string. The string contains all the values of the set separated by -.
 
 ### [9.](./)
 
