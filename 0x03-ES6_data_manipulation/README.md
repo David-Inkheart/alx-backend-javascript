@@ -32,7 +32,9 @@
 - Write a function named `setFromArray` that returns a set from an array.
 - It should accept an (Array, of any kind of element).
 
-### [7.](./)
+### [7.More set data structure](./7-has_array_values.js)
+- Write a function named `hasValuesFromArray` that returns a boolean if all the elements from the array exist in the set.
+- It should accept a `set` (Set) and `array` (Array) as parameters.
 
 ### [8.](./)
 
