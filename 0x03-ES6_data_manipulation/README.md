@@ -28,7 +28,9 @@
 - If adding the value is not possible the error `Position outside range` should be thrown.
 
 
-### [6.](./)
+### [6.Set data structure](./6-set.js)
+- Write a function named `setFromArray` that returns a set from an array.
+- It should accept an (Array, of any kind of element).
 
 ### [7.](./)
 
