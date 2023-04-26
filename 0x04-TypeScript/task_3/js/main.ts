@@ -1,5 +1,4 @@
 // At the top of the file create a triple slash directive that includes all the dependencies from crud.d.ts
-
 /// <reference path="./crud.d.ts" />
 
 // Import the rowID type and rowElement from interface.ts

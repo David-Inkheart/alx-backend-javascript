@@ -88,21 +88,25 @@ Create the DirectorInterface interface with the 3 expected methods:
 - `workFromHome()` returning a string
 - `getCoffeeBreak()` returning a string
 - `workDirectorTasks()` returning a string
+
 Create the TeacherInterface interface with the 3 expected methods:
 
 - `workFromHome()` returning a string
 - `getCoffeeBreak()` returning a string
 - `workTeacherTasks()` returning a string
+
 Create a class Director that will implement DirectorInterface
 
 - `workFromHome` should return the string `Working from home`
 - `getToWork` should return the string `Getting a coffee break`
 - `workDirectorTasks` should return the string `Getting to director tasks`
+
 Create a class Teacher that will implement TeacherInterface
 
 - `workFromHome` should return the string `Cannot work from home`
 - `getCoffeeBreak` should return the string `Cannot have a break`
 - `workTeacherTasks` should return the string `Getting to work`
+
 Create a function `createEmployee` with the following requirements:
 
 - It can return either a `Director` or a `Teacher` instance
@@ -139,7 +143,7 @@ Getting to director tasks
 
 ### [7. Type checking](./task_2/js/main.ts)
 
-Write a String literal type named `Subjects` allowing a variable to have the value `Math` or `History` only. Write a function named `teachClass`:
+Write a [String literal type](https://www.typescriptlang.org/docs/handbook/advanced-types.html#string-literal-types) named `Subjects` allowing a variable to have the value `Math` or `History` only. Write a function named `teachClass`:
 
 - it takes `todayClass` as an argument
 - it will return the string `Teaching Math` if `todayClass` is `Math`
@@ -152,3 +156,31 @@ Teaching Math
 teachClass('History');
 Teaching History
 ```
+
+### [8. Ambient Namespaces](./task_3/js/main.ts)
+
+### [9. Namespace & Declaration merging](./task_3/js/subject)
+
+### [10. Update task_4/js/main.ts](./task_4/js/main.ts)
+
+- create and export a constant `cpp` for Cpp Subjects
+- create and export a constant `java` for Java Subjects
+- create and export a constant `react` for React Subjects
+- create and export one Teacher object `cTeacher` with `experienceTeachingC = 10`
+- for Cpp subject, log to the console `C++`, set `cTeacher` as the teacher, call the two methods `getRequirements` and `getAvailableTeacher` and print the strings they return
+- for Java subject, log to the console Java, set `cTeacher` as the teacher, call the two methods `getRequirements` and `getAvailableTeacher`, and print the strings they return
+- for React subject, log to the console `React`, set `cTeacher` as the teacher, call the two methods `getRequirements` and `getAvailableTeacher`, and print the strings they return
+
+### [11. Brand convention & Nominal typing](./task_5/js/main.ts)
+
+Create a directory `task_5` and copy these configuration files into the root of task_5: `package.json`, `tsconfig.json`, `webpack.config.js`
+
+Create two interfaces `MajorCredits` and `MinorCredits` in `task_5/js/main.ts`:
+
+- Each interface defines a number named `credits`
+- Add a brand property to each interface in order to uniquely identify each of them
+
+Create two functions named `sumMajorCredits` and `sumMinorCredits` in `task_5/js/main.ts`:
+- Each function takes two arguments `subject1` and `subject2`
+- `sumMajorCredits` returns `MajorCredits` value and `sumMinorCredits` returns `MinorCredits` value
+- Each function sums the credits of the two subjects
