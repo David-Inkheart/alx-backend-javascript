@@ -77,3 +77,46 @@ printTeacher = (firstName, lastName) => `${firstName.charAt(0)}. ${lastName}`
 // test as a .js file
 // console.log(printTeacher('John', 'Doe'));
 
+
+// TASK 4
+// Write a Class named StudentClass:
+
+// The constructor accepts firstName(string) and lastName(string) arguments
+// The class has a method named workOnHomework that return the string Currently working
+// The class has a method named displayName. It returns the firstName of the student
+// The constructor of the class should be described through an Interface
+// The class should be described through an Interface
+
+// Requirements:
+
+// You can reuse the Webpack configuration from the previous exercise to compile the code.
+// When running npm run build, no TypeScript error should be displayed.
+// Every variable should use TypeScript when possible.
+
+// source: https://www.typescriptlang.org/docs/handbook/interfaces.html#class-types
+// source: https://www.typescriptlang.org/docs/handbook/classes.html#inheritance
+
+interface ConstructorOfStudent {
+    new(firstName: string, lastName: string): ClassOfStudent;
+}
+
+interface ClassOfStudent {
+    firstName: string;
+    lastName: string;
+    workOnHomework(): string;
+    displayName(): string;
+}
+
+class StudentClass implements ClassOfStudent {
+    firstName;
+    lastName;
+
+    constructor (firstName: string, lastName: string){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    workOnHomework = () => 'Currently working';
+
+    displayName = () => this.firstName;
+}
