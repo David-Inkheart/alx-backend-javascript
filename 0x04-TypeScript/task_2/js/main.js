@@ -23,13 +23,38 @@ var createEmployee = function (salary) {
         return new Director();
     }
 };
-
 // test as a .js file
-console.log(createEmployee(200));
+// console.log(createEmployee(200));
 // Teacher
-console.log(createEmployee(1000));
+// console.log(createEmployee(1000));
 // Director
-console.log(createEmployee('$500'));
+// console.log(createEmployee('$500'));
 // Director
-console.log(createEmployee('$300'));
+// console.log(createEmployee('$300'));
 // Director
+// TASK 6
+// Write a function isDirector:
+// it accepts employee as an argument
+// it will be used as a type predicate and if the employee is a director
+// Write a function executeWork:
+// it accepts employee as an argument
+// if the employee is a Director, it will call workDirectorTasks
+// if the employee is a Teacher, it will call workTeacherTasks
+// source: https://www.typescriptlang.org/docs/handbook/advanced-types.html#using-type-predicates
+// source: https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types
+var isDirector = function (employee) {
+    return employee instanceof Director;
+};
+var executeWork = function (employee) {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    }
+    else {
+        return employee.workTeacherTasks();
+    }
+};
+// test as a .js file
+console.log(executeWork(createEmployee(200)));
+// Getting to work
+console.log(executeWork(createEmployee(1000)));
+// Getting to director tasks
