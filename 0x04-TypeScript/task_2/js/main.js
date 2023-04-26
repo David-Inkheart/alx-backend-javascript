@@ -53,8 +53,9 @@ var executeWork = function (employee) {
         return employee.workTeacherTasks();
     }
 };
+var teachClass = function (todayClass) { return (todayClass === "Math") ? "Teaching Math" : "Teaching History"; };
 // test as a .js file
-console.log(executeWork(createEmployee(200)));
-// Getting to work
-console.log(executeWork(createEmployee(1000)));
-// Getting to director tasks
+console.log(teachClass("Math"));
+// Teaching Math
+console.log(teachClass("History"));
+// Teaching History

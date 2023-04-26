@@ -112,3 +112,25 @@ const executeWork = (employee: Director | Teacher): string => {
 // Getting to work
 // console.log(executeWork(createEmployee(1000)));
 // Getting to director tasks
+
+
+// TASK 7
+
+// Write a String literal type named Subjects allowing a variable to have the value Math or History only. Write a function named teachClass:
+
+// it takes todayClass as an argument
+// it will return the string Teaching Math if todayClass is Math
+// it will return the string Teaching History if todayClass is History
+
+// source: https://www.typescriptlang.org/docs/handbook/advanced-types.html#string-literal-types
+
+type Subjects = "Math" | "History";
+
+const teachClass = (todayClass: Subjects): string => (todayClass === "Math") ? "Teaching Math" : "Teaching History";
+
+// test as a .js file
+// console.log(teachClass("Math"));
+// Teaching Math
+// console.log(teachClass("History"));
+// Teaching History
+

@@ -118,3 +118,37 @@ Director
 console.log(createEmployee('$500'));
 Director
 ```
+
+### [6. Advanced types Part 2](./task_2/js/main.ts)
+Write a function `isDirector`:
+
+- it accepts `employee` as an argument
+- it will be used as a [type predicate](https://www.typescriptlang.org/docs/handbook/advanced-types.html#using-type-predicates) and if the employee is a director
+Write a function `executeWork`:
+
+- it accepts `employee` as an argument
+- if the employee is a Director, it will call `workDirectorTasks`
+- if the employee is a Teacher, it will call `workTeacherTasks`
+Expected result:
+```
+executeWork(createEmployee(200));
+Getting to work
+executeWork(createEmployee(1000));
+Getting to director tasks
+```
+
+### [7. Type checking](./task_2/js/main.ts)
+
+Write a String literal type named `Subjects` allowing a variable to have the value `Math` or `History` only. Write a function named `teachClass`:
+
+- it takes `todayClass` as an argument
+- it will return the string `Teaching Math` if `todayClass` is `Math`
+- it will return the string `Teaching History` if `todayClass` is History
+
+Expected result:
+```
+teachClass('Math');
+Teaching Math
+teachClass('History');
+Teaching History
+```
