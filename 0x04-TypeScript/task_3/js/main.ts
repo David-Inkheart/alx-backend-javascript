@@ -8,7 +8,7 @@ import { RowID, RowElement } from './interface';
 
 // Import everything from crud.js as CRUD
 
-import * as CRUD from './crud.js';
+import * as CRUD from './crud';
 
 // Create an object called row with the type RowElement with the fields set to these values:
 
@@ -39,13 +39,13 @@ CRUD.deleteRow(newRowID);
 
 // Expected result:
 
-const obj = {firstName: "Guillaume", lastName: "Salva"};
-CRUD.insertRow(obj)
+// const obj = {firstName: "Guillaume", lastName: "Salva"};
+// CRUD.insertRow(obj)
 // Insert row {firstName: "Guillaume", lastName: "Salva"}
 
-const updatedRow: RowElement = { firstName: "Guillaume", lastName: "Salva", age: 23 };
-CRUD.updateRow(newRowID, updatedRow);
+// const updatedRow: RowElement = { firstName: "Guillaume", lastName: "Salva", age: 23 };
+// CRUD.updateRow(newRowID, updatedRow);
 // Update row 125 {firstName: "Guillaume", lastName: "Salva", age: 23}
 
-CRUD.deleteRow(125);
+// CRUD.deleteRow(125);
 // Delete row id 125

@@ -13,7 +13,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 // Import everything from crud.js as CRUD
-var CRUD = require("./crud.js");
+var CRUD = require("./crud");
 // Create an object called row with the type RowElement with the fields set to these values:
 // firstName: Guillaume
 // lastName: Salva
@@ -29,10 +29,10 @@ var updateRow = __assign(__assign({}, row), { age: 23 });
 CRUD.updateRow(newRowID, updateRow);
 CRUD.deleteRow(newRowID);
 // Expected result:
-var obj = { firstName: "Guillaume", lastName: "Salva" };
-CRUD.insertRow(obj);
+const obj = {firstName: "Guillaume", lastName: "Salva"};
+CRUD.insertRow(obj)
 // Insert row {firstName: "Guillaume", lastName: "Salva"}
-var updatedRow = { firstName: "Guillaume", lastName: "Salva", age: 23 };
+const updatedRow = { firstName: "Guillaume", lastName: "Salva", age: 23 };
 CRUD.updateRow(newRowID, updatedRow);
 // Update row 125 {firstName: "Guillaume", lastName: "Salva", age: 23}
 CRUD.deleteRow(125);

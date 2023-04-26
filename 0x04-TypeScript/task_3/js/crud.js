@@ -5,19 +5,19 @@
 // The crud.js library provides a global object called crud. This object has the following methods:
 
 export function insertRow(row) {
-    console.log('Insert row', row);
-    return Math.floor(Math.random() * Math.floor(1000));
-  }
+  console.log('Insert row', row);
+  return Math.floor(Math.random() * Math.floor(1000));
+}
   
-  export function deleteRow(rowId) {
-    console.log('Delete row id', rowId);
-    return;
-  }
+export function deleteRow(rowId) {
+  console.log('Delete row id', rowId);
+  return;
+}
   
-  export function updateRow(rowId, row) {
-    console.log(`Update row ${rowId}`, row);
-  
-    return rowId;
-  }
+export function updateRow(rowId, row) {
+  console.log(`Update row ${rowId}`, row);
+
+  return rowId;
+}
 
 //   The crud object has three methods: insertRow, deleteRow, and updateRow. Each method takes different arguments and returns different value
