@@ -42,7 +42,7 @@ of all the set values that start with a specific string (`startString`).
 - It should accept a `set` (Set) and `startString` (string) as parameters.
 - When a value starts with `startString` you only append the rest of the string. The string contains all the values of the set separated by -.
 
-### [9.]Map data structure(./9-groceries_list.js)
+### [9.Map data structure](./9-groceries_list.js)
 - Create a function named `groceriesList` that returns a map of groceries with the following items (name, quantity):
 ```
 Apples, 10
