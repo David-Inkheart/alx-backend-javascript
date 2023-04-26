@@ -72,7 +72,7 @@ interface printTeacherFunction {
 
 let printTeacher: printTeacherFunction;
 
-printTeacher = (firstName: string, lastName: string): string => `${firstName.charAt(0)}. ${lastName}`
+printTeacher = (firstName, lastName) => `${firstName.charAt(0)}. ${lastName}`
 
 // test as a .js file
 // console.log(printTeacher('John', 'Doe'));
