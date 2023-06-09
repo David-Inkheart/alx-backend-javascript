@@ -1,4 +1,4 @@
-## This project covers Basic types in Typescript, Interfaces, Classes and functions in Typescript, Generic types, Namespaces and merging decclarations in Typescript, the DOM and TypeScript, using ambient Namespace to import an external library, and basic nominal typing with Typescript.
+## This project covers Basic types in Typescript, Interfaces, Classes and functions in Typescript, Generic types, Namespaces and merging declarations in Typescript, the DOM and TypeScript, using ambient Namespace to import an external library, and basic nominal typing with Typescript.
 
 # TASKS
 
