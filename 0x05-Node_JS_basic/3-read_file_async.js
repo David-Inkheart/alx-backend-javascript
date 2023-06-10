@@ -1,13 +1,11 @@
 const fs = require('fs');
 
 async function countStudents(path) {
-  if (!path) {
-    throw new Error('Cannot load the database');
-  }
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf-8', (err, data) => {
       if (err) {
-        throw new Error('Cannot load the database');
+        reject(Error('Cannot load the database'));
+        return;
       }
       const lines = data.split('\n').filter((line) => line !== '');
       const columns = lines.shift().split(',');
