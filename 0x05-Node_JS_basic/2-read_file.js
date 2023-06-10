@@ -1,17 +1,8 @@
-// function countStudents in the file 2-read_file.js
-
 const fs = require('fs');
 
 function countStudents (path) {
   // attempt to read the database file synchronously
   try {
-    if (!fs.existsSync(path)) {
-      throw new Error('Cannot load the database');
-    }
-    if (path.slice(-4) !== '.csv') {
-      throw new Error('Invalid database format');
-    }
-
     fs.readFile(path, 'utf-8', (err, data) => {
       if (err) {
         throw new Error('Cannot load the database');
@@ -33,7 +24,7 @@ function countStudents (path) {
       console.log(`Number of students in SWE: ${SWEstudents.length}. List: ${SWEstudents.join(', ')}`);
     });
   } catch (err) {
-    console.log(err);
+    throw err;
   }
 }
 

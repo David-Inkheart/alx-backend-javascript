@@ -1,5 +1,3 @@
-// Execute by adding this to the command line: node 1-stdin.js
-
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
