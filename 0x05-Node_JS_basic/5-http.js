@@ -15,9 +15,6 @@ async function countStudents(path) {
       const fieldIndex = columns.indexOf('field');
       const CSstudents = students.filter((student) => student[fieldIndex] === 'CS').map((student) => student[0]);
       const SWEstudents = students.filter((student) => student[fieldIndex] === 'SWE').map((student) => student[0]);
-      // console.log(`Number of students: ${students.length}`);
-      // console.log(`Number of students in CS: ${CSstudents.length}. List: ${CSstudents.join(', ')}`);
-      // console.log(`Number of students in SWE: ${SWEstudents.length}. List: ${SWEstudents.join(', ')}`);
       result.push(`Number of students: ${students.length}`);
       result.push(`Number of students in CS: ${CSstudents.length}. List: ${CSstudents.join(', ')}`);
       result.push(`Number of students in SWE: ${SWEstudents.length}. List: ${SWEstudents.join(', ')}`);
@@ -32,16 +29,18 @@ const port = 1245;
 const app = http.createServer(async (req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+
   if (req.url === '/') {
     res.end('Hello Holberton School!');
-  } else if (req.url === '/students') {
+  }
+
+  if (req.url === '/students') {
+    res.write('This is the list of our students\n');
     await countStudents(process.argv[2]).then((result) => {
-      res.end('This is the list of our students\n' + result.join('\n'));
+      res.end(result.join('\n'));
     }).catch((error) => {
       res.end(error.message);
     });
-  } else {
-    res.end();
   }
 });
 
