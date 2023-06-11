@@ -1,7 +1,5 @@
 const fs = require('fs');
 
-const result = [];
-
 async function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf-8', (err, data) => {
@@ -18,10 +16,6 @@ async function countStudents(path) {
       console.log(`Number of students: ${students.length}`);
       console.log(`Number of students in CS: ${CSstudents.length}. List: ${CSstudents.join(', ')}`);
       console.log(`Number of students in SWE: ${SWEstudents.length}. List: ${SWEstudents.join(', ')}`);
-      result.push(`Number of students: ${students.length}`);
-      result.push(`Number of students in CS: ${CSstudents.length}. List: ${CSstudents.join(', ')}`);
-      result.push(`Number of students in SWE: ${SWEstudents.length}. List: ${SWEstudents.join(', ')}`);
-      resolve(result);
       resolve();
     });
   });
