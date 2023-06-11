@@ -12,15 +12,14 @@ const app = http.createServer((req, res) => {
   }
 
   if (req.url === '/students') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
     countStudents(process.argv[2])
       .then((data) => {
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-        res.end(data);
+        const responseBody = data.join('\n');
+        res.end(responseBody);
       })
       .catch((error) => {
-        res.statusCode = 500;
-        res.setHeader('Content-Type', 'text/plain; charset=utf-8');
         res.end(error.message);
       });
   }
@@ -29,6 +28,5 @@ const app = http.createServer((req, res) => {
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
-
 
 module.exports = app;
